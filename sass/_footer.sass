@@ -1,0 +1,82 @@
+footer
+    text-align: left
+    padding: 60px 0 0
+    background-color: $prime
+    .container
+        align-items: start
+        padding-bottom: 40px
+
+    .logo
+        display: block
+        margin: 0 auto
+        text-align: center
+        padding-left: 10px
+        img
+
+    .soc
+        margin-top: 5x
+        margin-left: -5px
+        a
+            display: inline-block
+            vertical-align: middle
+            padding: 5px
+            border-radius: 5px
+            img
+                display: block
+            &:hover
+                background-color: rgba(255, 255, 255, .1)
+
+    .col
+        max-width: 250px
+        &:last-of-type
+            text-align: right
+
+    p
+        margin: 0
+        color: rgba(255, 255, 255, .5)
+        a, address, b
+            color: #fff
+            font-style: normal
+
+    address
+        opacity: .7
+        font-style: normal
+        line-height: 150%
+        display: block
+
+    @media screen and (max-width: 960px)
+        .container 
+            max-width: 350px
+            text-align: center
+            margin-bottom: 0
+        .logo 
+            order: 1
+            margin: 0 auto 30px
+        .col 
+            order: 2
+            margin: 0 auto 30px
+            text-align: center !important
+            &:first-of-type
+                padding-bottom: 20px
+                border-bottom: 1px solid rgba(255, 255, 255, .2)
+
+        address
+            text-align: center
+
+.developt
+    background-color: rgba(255, 255, 255, .05)
+    text-align: center
+    color: #ffffff !important
+    a
+        display: inline-block
+        padding: 20px
+        font-weight: 300
+        color: rgba(255, 255, 255, .8)
+        b
+            border-bottom: 1px solid #fff
+            color: #fff
+
+    @media screen and ( max-width: 700px )
+        a
+            padding: 16px
+            font-size: 14px
