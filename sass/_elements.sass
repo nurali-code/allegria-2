@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6
     font-weight: 600
 
 h1
-    font-size: 58px
+    font-size: 60px
     line-height: 120%
 
 h2
@@ -98,13 +98,12 @@ section
     color: #fff
     padding: 20px 52px 18px
     background-color: $prime
-    min-width: 200px
     background-repeat: no-repeat
     background-position: center center
     background-size: auto 70%
     border-radius: 60px
     border: 2px solid transparent
-    box-shadow: 0px 30px 41px -16px rgba(37, 67, 160, 0.57)
+    box-shadow: 0px 20px 56px -10px rgb(37 67 160 / 57%)
     &-menu
         z-index: 9999
         display: inline-block
@@ -155,20 +154,6 @@ section
                     transform: translate(-50%, -50%) rotate(-90deg)
                     background-color: #fff
 
-    &.white
-        background-color: #fff
-        color: $black
-        box-shadow: none !important
-        &.loading
-            background-color: rgba(#fff, .3)
-
-    &.black
-        background-color: #000
-        color: #fff
-        box-shadow: none !important
-        &.loading
-            background-color: rgba($black, .3)
-
     &:hover
         opacity: 1
         color: #fff
@@ -191,21 +176,10 @@ section
         color: transparent
         background-image: url('../img/loader.gif')
 
-    &-2
+    &_outline
+        border: 1px solid #fff
         background-color: transparent
-        color: #fff
-        border: 2px solid #fff
-
-    &-3
-        background-color: $prime
-        color: #fff
-        border-color: $prime
-        &:hover
-            background-color: $prime !important
-            opacity: .8
-
-    &.rounded
-        border-radius: 60px
+        box-shadow: none
 
 strong, b
     font-weight: 600
@@ -219,6 +193,14 @@ form
     justify-content: space-between
     align-items: center
     flex-wrap: wrap
+    &_title
+        align-items: flex-start
+        flex-wrap: nowrap
+        h2, p
+            max-width: 45%
+            margin: 0
+
+    &_start
 
 input,
 textarea,
@@ -270,8 +252,8 @@ select
     padding: 70px 60px
     margin: 0
     max-width: 580px
-    background-color: rgba(83, 127, 231, 0.79)
-    backdrop-filter: blur(16.5px)
+    background-color: rgba(83, 127, 231, 0.6)
+    backdrop-filter: blur(10px)
     border-radius: 50px
     font-weight: 400
     font-size: 20-px
@@ -317,7 +299,7 @@ select
 
         &.active::before
             transform: translateY(-50%) rotate(0deg)
-            background-color: #eee
+            background-color: rgba(0, 0, 0, .1)
 
     &-content
         padding: 0 30px
@@ -345,19 +327,19 @@ select
     height: 4px
     border-radius: 4px
     z-index: 99999
-    background-color: blue
+    background-color: $prime
     transition: width .6s ease
     pointer-events: none
 
 .wg
     list-style: none
     position: fixed
-    bottom: 40px
+    bottom: 50px
     right: 40px
     z-index: 99999
     text-align: center
     &-btn
-        background-color: #00b2f0
+        background-color: #000
         width: 60px
         height: 60px
         border-radius: 50%
@@ -368,7 +350,7 @@ select
         background-position: center center
         background-size: 45%
         &.active
-            background-color: #fff
+            background-color: rgba(0, 0, 0, .8)
             background-image: url('../img/close.svg')
             background-size: 60%
 
@@ -410,7 +392,7 @@ select
             a
                 transform: translateY(0%)
 
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1500px)
     h1
         font-size: 48px
 
@@ -421,31 +403,63 @@ select
         font-size: 16px
 
     .container
-        max-width: 1024px
-
-@media screen and (max-width: 960px)
-    .container
-        max-width: 684px
-
-@media screen and (max-width: 639px)
-    h1, h2
-        font-size: 30px
+        max-width: 1100px
 
     .btn
+        &_outline
+            border-width: 1px
+
+@media screen and (max-width: 1200px)
+    .container
+        padding: 0 20px
+        // max-width: 684px
+
+    section
+        padding: 60px 0
+
+    .wrap
+        &_title
+            display: block
+            h2, p
+                max-width: 100%
+                width: 100%
+@media screen and (max-width: 700px)
+    h1, h2
+        font-size: 28px
+
+    h3
+        font-size: 24px
+
+    .container
+        padding: 0 15px
+
+    .btn
+        font-size: 18px
         border-width: 1px
-        padding: 16px 10px 14px
+        padding: 16px 30px 14px
 
     .dropdown
         &-btn
-            font-size: 20px
-            padding: 20px 50px 20px 20px
+            font-size: 14px
+            padding: 20px 50px 20px 14px
             &::before
                 right: 12px
+
+        &-content
+            padding: 0 14px
+            &.active
+                opacity: 1
+                padding: 0 14px 20px
+
+    .text__pop
+        padding: 40px
+        font-size: 16px
+        line-height: 140%
 
 @media screen and (max-width: 500px)
     .container
         padding: 0 16px
 
     .wg
-        bottom: 20px
+        bottom: 50px
         right: 20px

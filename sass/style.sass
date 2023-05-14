@@ -2,7 +2,6 @@
 @import 'elements'
 @import 'header'
 @import 'modal'
-@import 'footer'
 
 .main
     position: relative
@@ -13,12 +12,29 @@
     height: 100vh
     color: #fff
     padding: 80px 0 140px
-    background-image: url('../img/main.jpg')
     max-height: 96vh
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
     border-radius: 0 0 120px 120px
+    max-height: 1100px
+
+    &__bg
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1000
+        pointer-events: none
+        object-fit: cover
+
+    &__picture
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        display: block
 
     h1
         max-width: 850px
@@ -28,17 +44,18 @@
             font-weight: 900
 
     &__descr
+        font-weight: 500
         font-size: 20px
         margin-bottom: 20px
 
-    img
+    &__girl
         position: absolute
-        right: 13%
-        width: 30%
-        max-height: 90%
+        right: 10%
+        width: 34%
+        max-height: 85%
         object-fit: contain
         bottom: 0
-        z-index: -1000
+        z-index: -1
         object-fit: contain
         pointer-events: none
 
@@ -46,7 +63,7 @@
     &-list
         align-items: stretch
         position: relative
-        top: -150px
+        top: -100px
         gap: 0%
         max-width: 1500px
     &-item
@@ -54,25 +71,29 @@
         background-color: #fff
         border: 1px solid rgba(0, 0, 0, .2)
         border-radius: 60px
-        width: 24.5%
-        padding: 82px 42px
+        width: 25%
+        padding: 72px 42px
         img
             margin-bottom: 20px
         p
             font-weight: 400
             font-size: 16px
             line-height: 150%
+            margin: 0
+            b
+                display: block
 
-        &.pop
-            position: relative
-            z-index: 111
-            top: -100px
-            background-color: #537FE7
-            border-color: transparent
-            box-shadow: -46px 41px 102px -8px rgba(83, 127, 231, 0.52)
-            color: #fff
-            img
-                filter: invert(100%)
+        @media screen and ( min-width:  1200px)
+            &.pop
+                position: relative
+                z-index: 111
+                top: -50px
+                background-color: #537FE7
+                border-color: transparent
+                box-shadow: -46px 41px 102px -8px rgba(83, 127, 231, 0.52)
+                color: #fff
+                img
+                    filter: invert(100%)
 
 .about,
 .features
@@ -80,8 +101,10 @@
     color: #fff
     .container
         padding-top: 100px
+
     &__bg
         position: absolute
+        pointer-events: none
         top: 0
         left: -6%
         width: 112%
@@ -90,6 +113,7 @@
         height: 90%
         border-radius: 60px
         z-index: -1
+
     h2
         display: inline-block
         padding: 42px 200px 42px 0
@@ -106,8 +130,9 @@
             height: 100%
             right: 0
             background-color: rgba(83, 127, 231, 0.6)
-            backdrop-filter: blur(16.5px)
+            backdrop-filter: blur(10px)
             border-radius: 50px
+
 .about
     p
         font-size: 20px
@@ -115,14 +140,16 @@
         margin: 0
 
 .features
+    h2
+        margin-bottom: 0
+    
     .wrap
         align-items: stretch
         flex-wrap: nowrap
         &:first-child
             align-items: center
             margin-bottom: 145px
-            h2
-                margin: 0
+
     &__text
         font-weight: 400
         font-size: 22px
@@ -139,34 +166,36 @@
         font-weight: 700
         font-size: 24px
         line-height: 150%
+        background-color: rgba(83, 127, 231, 0.6)
+        backdrop-filter: blur(10px)
         img
             display: block
             margin-bottom: 40px
 
 .acounting
     .wrap
-        align-items: flex-start
-        flex-wrap: nowrap
-        h2, p
-            max-width: 45%
 
         p
             font-size: 18px
             line-height: 150%
 
-    ul
+    &-items
         justify-content: center
-        gap: 25px
-        margin: 120px 0
-        flex-wrap: wrap
+        align-items: flex-start
+        padding: 0
+        gap: 2%
+        margin: 100px 20px 80px
         li
             min-width: 200px
-            width: 11%
+            width: 12%
             list-style: none
             font-weight: 600
             font-size: 16px
             line-height: 150%
+            padding-bottom: 40px
+            transition: .3s
             &::before
+                transition: .3s
                 content: ''
                 display: block
                 width: 100%
@@ -174,6 +203,20 @@
                 margin: 0 0 27px
                 background-color: #537FE7
                 box-shadow: -5px 4px 20px #537FE7
+            // &:nth-child(even)
+            //     &::before
+            //         background-color: #000
+
+            &:hover
+                transform: translateY(-20px)
+                &::before
+                    top: 100%
+
+    &__text
+        max-width: 35%
+        font-size: 20px
+        line-height: 150%
+        margin-bottom: 90px
 
     &-service
         position: relative
@@ -181,19 +224,14 @@
         color: #fff
         .wrap
             align-items: center
-            p
-                max-width: 40%
-                font-size: 20px
-                line-height: 150%
-                margin: 0
 
         .col
             margin-top: 90px
-            max-width: 50%
-            background-color: rgba(83, 127, 231, 0.79)
-            backdrop-filter: blur(16.5px)
+            max-width: 55%
+            background-color: rgba(83, 127, 231, 0.6)
+            backdrop-filter: blur(10px)
             border-radius: 50px
-            padding: 70px 40px
+            padding: 70px
 
         h3
             margin-bottom: 31px
@@ -203,6 +241,8 @@
         top: 0
         left: 0
         width: 100%
+        object-fit: cover
+        object-position: center center
         height: 80%
         z-index: -1
 
@@ -211,6 +251,7 @@
         border: 1px solid #fff
 
 .low
+    overflow: hidden
     .wrap
 
     &-img
@@ -236,22 +277,26 @@
             font-size: 20px
             line-height: 150%
 
+        ul
+            margin: 0
+
     &-service
         background: #537FE7
         color: #fff
-        box-shadow: inset -166px 52px 250px -137px rgba(0, 0, 0, 0.38)
+        // box-shadow: inset -166px 52px 250px -137px rgba(0, 0, 0, 0.38)
         border-radius: 130px 0px 0px 130px
-        padding: 30px 0 30px 0
+        padding: 30px 0
         max-width: 90%
-        margin: 180px 0 0 auto 
+        margin: 180px 0 0 auto
         li
             font-weight: 400
             font-size: 16px
             line-height: 150%
             padding: 5px 0
+
         .scroll
             padding: 40px 0 40px 83px
-            gap: 14px
+            gap: 12px
             margin-bottom: 40px
             flex-wrap: nowrap
             overflow-x: scroll
@@ -262,14 +307,315 @@
                 width: 0
                 height: 0
 
-@media screen and (max-width: 1199px)
-    .main
+    &-footer
+        padding: 40px 0 60px 83px
+        max-width: 950px
+        flex-wrap: nowrap
+        p
+            max-width: 55%
+            margin: 0
 
-@media screen and (max-width: 959px)
+@media screen and (max-width: 1500px)
     .main
+        padding-bottom: 100px
+        min-height: 770px
+        &__descr
+            font-size: 18px
+            margin-bottom: 10px
 
-@media screen and (max-width: 639px)
+@media screen and (max-width: 1200px)
     .main
+        border-radius: 0
+        // display: block
+        height: unset
+        margin-bottom: 250px
+        img
+            width: 100%
+            right: 0
+            max-height: 83%
+
+        .container
+            margin: auto 0 0 0
+            padding: 40px 15px 200px
+            background-color: rgba($prime, .6)
+            backdrop-filter: blur(10px)
+            text-align: center
+            top: 480px
+            .btn
+                box-shadow: none
+                border: 1px solid #fff
+                background-color: transparent
+
+    .about
+        .container
+            padding-top: 0
+            padding-bottom: 0
+        h2
+            margin-bottom: 0
+            display: block
+            top: 50px
+            margin: 0 auto
+            text-align: center
+            width: 80%
+            padding: 30px
+            &::before
+                width: 100%
+                border-radius: 40px
+        &__bg
+            position: relative
+            left: -20px
+            transform: none
+            width: 100vw
+            display: block
+
+        .text__pop
+            position: relative
+            top: -100px
+            max-width: 90%
+            margin: 0 auto
+            padding: 50px
+            font-size: 18px
+
+    .features
+        .container
+            padding: 80px 20px
+        h2
+            padding: 0
+            width: 100%
+            &::before
+                display: none
+
+        &__text
+            max-width: 100%
+
+        .wrap
+            &:first-child
+                display: block
+                margin-bottom: 40px
+                h2
+                    max-width: 100%
+                    margin-bottom: 25px
+
+        ul
+            width: 100vw
+            position: relative
+            left: -20px
+            flex-wrap: nowrap
+            overflow-x: scroll
+            gap: 14px
+            padding: 20px
+            margin: 0
+
+        &-item
+            min-width: 320px
+            font-size: 20px
+
+        &__bg
+            width: 100%
+            height: 100%
+            transform: none
+            left: 0
+            border-radius: 0
+
+    .services
+        &-list
+            overflow-x: scroll
+            flex-wrap: nowrap
+            top: -40px
+            gap: 14px
+            padding: 20px 15px
+
+        &-item
+            width: 350px
+            min-width: 350px
+            position: static !important
+            // padding: 50px 30px
+
+    .acounting
+        h2
+            margin-bottom: 30px
+
+        &__text
+            max-width: 100%
+        .col
+            max-width: 100%
+        &-service
+            padding: 100px 0
+            .wrap
+                max-width: 700px
+                margin: 0 auto
+                display: block
+
+    .low
+        .container
+            max-width: 700px
+        p
+            max-width: 80%
+            left: 10%
+        .wrap:not(.scroll)
+            flex-direction: column-reverse
+
+        &-img,
+        &-title
+            width: 100%
+
+        &-service
+            max-width: 100%
+            padding: 20px 0
+            border-radius: 60px 0px 0px 60px
+
+        .scroll
+            margin: 0 0 0
+            padding: 40px 0 40px 60px
+
+        &-footer
+            padding: 20px 0 40px 60px
+            display: block
+            p
+                max-width: 100%
+                margin-bottom: 30px
+
+@media screen and (max-width: 700px)
+    .main
+        min-height: 350px
+        &__descr
+            font-size: 16px
+            margin-bottom: 0
+
+        h1
+            margin-bottom: 26px
+
+        .container
+            top: 440px
+            padding-bottom: 120px
+
+    .services
+        &-list
+            top: 0
+            padding-top: 10px
+        &-item
+            width: 280px
+            min-width: 280px
+            border: 1px solid #000000
+            border-radius: 50px
+            padding: 44px 30px
+            img
+                max-width: 55px
+                margin-bottom: 10px
+            p
+                font-size: 13px
+                line-height: 150%
+
+    .about
+        padding-bottom: 0
+        h2
+            text-align: left
+            top: 0
+            color: #000
+            padding: 0
+            width: 100%
+            margin-bottom: 30px
+            &::before
+                display: none
+
+        &__bg
+            height: 500px
+            border-radius: 0
+
+        .text__pop
+            max-width: 100%
+            width: 100%
+            padding: 40px 30px
+            font-size: 16px
+            line-height: 140%
+
+    .features
+        padding-top: 0
+        .cotainer
+            padding: 60px 15px
+
+        &__text
+            font-size: 16px
+
+        .wrap
+            padding: 20px 15px
+            &:first-child
+                margin-bottom: 15px
+        &-item
+            min-width: 270px
+            width: 270px
+            padding: 50px 40px
+            font-size: 18px
+            img
+                max-width: 65px
+                margin-bottom: 20px
+
+    .acounting
+        padding: 0
+        .wrap p
+            font-size: 15px
+
+        &-items
+            margin: 60px auto
+            width: 95%
+            justify-content: space-between
+            li
+                font-size: 12px
+                min-width: unset
+                width: 48%
+
+        h3
+            margin-bottom: 25px
+
+        &__text
+            margin-bottom: 40px
+
+        &-service
+            .col
+                margin-top: 40px
+                padding: 40px 20px
+                border-radius: 30px
+
+    .low
+        padding: 0 0 100px
+        p
+            max-width: 100%
+            font-size: 15px
+        &-img
+            margin-top: 30px
+            img
+                max-width: 100vw
+                width: 100vw
+                position: relative
+                left: -15px
+                border-radius: 0
+            p
+                max-width: 100%
+                position: relative
+                left: 0
+                top: -100px
+
+        &-service
+            margin: 0
+
+        .scroll
+            padding: 30px 0 30px 20px
+
+        &-footer
+            padding: 0px 0 40px 30px
+            p
+                margin-bottom: 20px
+
+        &-item
+            width: 290px
+            min-width: 290px
+            h3
+                font-size: 22px
+            li
+                font-size: 14px
+                // padding: 3px 0
 
 @media screen and (max-width: 509px)
     .main
+
+@import 'footer'
