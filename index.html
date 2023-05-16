@@ -8,12 +8,21 @@
     <title>Аллегория - профессиональные юридические и бухгалтерские услуги в Алмате</title>
     <meta name="description"
         content="Мы предоставляем юридическое сопровождение и бухгалтерские услуги для бизнеса и частных лиц в Алматы уже более 15 лет. Наша команда квалифицированных юристов и бухгалтеров готова помочь вам в решении различных задач - от простых договоров до сложных многосторонних сделок. Мы гарантируем профессиональный и качественный сервис, который поможет организовать грамотную работу вашего бизнеса. С нами вы можете быть уверены в решении своей проблемы в 100% случаев. Обращайтесь к нам и получите оптимальное решение своих задач уже сегодня!">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=141516">
 </head>
 
 <body>
@@ -21,15 +30,15 @@
         <div class="container wrap">
             <a href="./index.html" class="logo"><img src="./img/logo.png" alt="Логотип Аллегория"></a>
             <ul class="nav wrap" id="navbar">
-                <li><a href="./accounting.html">Бухгалтерские услуги</a></li>
-                <li><a href="./low.html">Юридические услуги</a></li>
+                <li><a href="#acounting">Бухгалтерские услуги</a></li>
+                <li><a href="#low">Юридические услуги</a></li>
                 <li>
                     <hr>
                 </li>
                 <li class="hidden">
-                    <a href="tel:79293934589" class="phone">
+                    <a href="tel:+79293934589" class="phone">
                         <span>Телефон:</span>
-                        <b>+7 929 393-45-89</b>
+                        <b>+7 929 393 4589</b>
                     </a>
                 </li>
                 <li class="hidden">
@@ -43,11 +52,12 @@
                 <span>Наша почта:</span>
                 <b>allegoriya.too@mail.ru</b>
             </a> -->
-            <a href="tel:79293934589" class="phone top">
+            <a href="tel:+79293934589" class="phone top">
                 <span>Телефон для справок:</span>
-                <b>+7 929 393-45-89</b>
+                <b>+7 929 393 4589</b>
             </a>
-            <button class="btn btn_outline" id="modalOpen">Заказать звонок</button>
+            <a href="https://t.me/allegoriya" target="_blank" class="btn btn_outline">Заказать звонок</a>
+            <sapn id="modalOpen"></sapn>
             <button class="btn-menu" id="menuBtn"><span></span></button>
         </div>
     </header>
@@ -56,7 +66,7 @@
         <div class="container">
             <p class="main__descr">Работаем уже более 15 лет</p>
             <h1><b>Юридические <br> и бухгалтерские</b> <span class="nowrap">услуги для бизнеса</span></h1>
-            <a href="https://api.whatsapp.com/send?phone=73934589" target="_blank" class="btn">Консультация</a>
+            <a href="https://api.whatsapp.com/send?phone=79293934589" target="_blank" class="btn">Консультация</a>
         </div>
         <picture class="main__picture">
             <!-- <source type="image/avif" srcset="./img/girl.avif"> -->
@@ -146,7 +156,7 @@
         </div>
     </section>
 
-    <section class="acounting">
+    <section class="acounting" id="acounting">
         <div class="wrap wrap_title container">
             <h2>
                 Бухгалтерские услуги
@@ -170,7 +180,7 @@
             <li>Налоговый учет для разных систем налогообложения;</li>
             <li>Сдача отчетности;</li>
             <li>Восстановление учета;</li>
-            <li>Бухгалтерский аудит.</li>
+            <li>Налоговый аудит.</li>
         </ul>
         <div class="acounting-service">
             <div class="wrap container">
@@ -197,7 +207,7 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropdown-btn">Веб-студий, интернет-магазинов и агентств</button>
+                            <button class="dropdown-btn">Веб-студий, интернет-магазинов и маркетплейсов</button>
                             <div class="dropdown-content">
                                 <p>
                                     Важно учитывать налоги и сборы, связанные с деятельностью веб-студии,
@@ -227,7 +237,7 @@
                         <div class="dropdown">
                             <button class="dropdown-btn">
                                 Транспортных компаний, логистических
-                                <span class="nowrap">центров и доставок</span>
+                                <span class="nowrap">центров и экспедиторов</span>
                             </button>
                             <div class="dropdown-content">
                                 <p>
@@ -241,7 +251,7 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropdown-btn">Фрилансеров и продавцов на маркетплейсах</button>
+                            <button class="dropdown-btn">IT-компаний и компаний в сфере оказания услуг</button>
                             <div class="dropdown-content">
                                 <p>
                                     Одной из главных задач фрилансера является учет всех доходов и расходов, связанных с
@@ -280,7 +290,7 @@
         </div>
     </section>
 
-    <section class="low">
+    <section class="low" id="low">
         <div class="container">
             <div class="wrap">
                 <div class="low-img">
@@ -311,14 +321,13 @@
         <div class="low-service">
             <div class="wrap scroll">
                 <div class="low-item">
-                    <h3>Регистрация юридических лиц в РК</h3>
+                    <h3>Консультации для бизнеса</h3>
                     <ul>
-                        <li>Регистрация коммерческих организаций.</li>
-                        <li>Некоммерческих организаций.</li>
-                        <li>Филиалов и представительства.</li>
+                        <li>При выборе системы алогообложения.</li>
+                        <li>При разработке налогового планирования и оптимизации.</li>
+                        <li>При разработки стратегии по экспорту/импорту в условиях санкций.</li>
                         <li>Исправление ошибок в регистрационных данных.</li>
-                        <li>Перерегистрация.</li>
-                        <li>Изменения в учредительных документах.</li>
+                        <li>По открытию бизнеса за границей.</li>
                     </ul>
                 </div>
                 <div class="low-item">
@@ -333,35 +342,33 @@
                     </ul>
                 </div>
                 <div class="low-item">
-                    <h3>Регистрация юридических лиц в РК</h3>
+                    <h3>Составление и экспертиза документов.</h3>
                     <ul>
-                        <li>Регистрация коммерческих организаций.</li>
-                        <li>Некоммерческих организаций.</li>
-                        <li>Филиалов и представительства.</li>
-                        <li>Исправление ошибок в регистрационных данных.</li>
-                        <li>Перерегистрация.</li>
-                        <li>Изменения в учредительных документах.</li>
+                        <li>Договоры. Составление договоров. Экспертиза договоров.</li>
+                        <li>Разработка учредительных документов</li>
+                        <li>Претензионные письма. Ответы на претензии.</li>
+                        <li>Составление исковых заявлений. Отзыв на исковое заявление. Процессуальные документы.</li>
+                        <li>Апелляционная жалоба. Кассация. Надзор.</li>
                     </ul>
                 </div>
                 <div class="low-item">
-                    <h3>Регистрация юридических лиц в РК</h3>
+                    <h3>Представительство в суде. Арбитраж.</h3>
                     <ul>
-                        <li>Регистрация коммерческих организаций.</li>
-                        <li>Некоммерческих организаций.</li>
-                        <li>Филиалов и представительства.</li>
-                        <li>Исправление ошибок в регистрационных данных.</li>
-                        <li>Перерегистрация.</li>
-                        <li>Изменения в учредительных документах.</li>
+                        <li>Гражданские споры. </li>
+                        <li>Экономический суд.</li>
+                        <li>Административное производство.</li>
+                        <li>Обжалование налоговых уведомлений и постановлений.</li>
+                        <li>Помощь в арбитражном суде. Обжалование решений суда.</li>
                     </ul>
                 </div>
                 <div class="low-item">
-                    <h3>Регистрация юридических лиц в РК</h3>
+                    <h3>Ликвидация фирм.</h3>
                     <ul>
-                        <li>Регистрация коммерческих организаций.</li>
+                        <li>Регистрация коммерческих организаций. </li>
                         <li>Некоммерческих организаций.</li>
                         <li>Филиалов и представительства.</li>
                         <li>Исправление ошибок в регистрационных данных.</li>
-                        <li>Перерегистрация.</li>
+                        <li>Перерегистрация. </li>
                         <li>Изменения в учредительных документах.</li>
                     </ul>
                 </div>
@@ -373,11 +380,11 @@
                     </b>
                     Все, что вы прочитали на данном сайте мы знаем на отлично и делаем с удовольствием
                 </p>
-                <button class="btn btn_outline">Консультация</button>
+                <a href="https://api.whatsapp.com/send?phone=73934589" target="_blank"
+                    class="btn btn_outline">Консультация</a>
             </div>
         </div>
     </section>
-
 
     <footer class="footer" id="address">
         <div class="address">
@@ -392,10 +399,11 @@
                 <address>
                     Город Алматы, бульвар Бухар Жырау, 26/1 офис 49 БЦ Evolution, 050021
                 </address>
-                <a href="#" class="btn btn_outline">allegoriya.kz</a>
+                <a href="https://allegoriya.kz/" target="_blank" class="btn btn_outline">allegoriya.kz</a>
             </div>
         </div>
-        <iframe loading="lazy"></iframe>
+        <iframe loading="lazy"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3c09e443a671b646ddb9904304b48cb2fc194b6c137522557d0e5f305149c19a&amp;source=constructor"></iframe>
         <div class="container wrap">
             <div class="col">
                 <a href="#main" class="logo">
@@ -408,21 +416,21 @@
             </div>
             <div class="col" id="contacts">
                 <h3>Контакты</h3>
-                <a href="tel:89050802341" class="phone">
+                <a href="tel:+79293934589" class="phone">
                     <span>Телефон для справок:</span>
-                    <b>8(905)080-23-41</b>
+                    <b>+7(929) 393-45-89</b>
                 </a>
-                <a href="mailto:reizbih@mail.ru" class="phone">
+                <a href="mailto:allegoriya.too@mail.ru" class="phone">
                     <span>Наша почта:</span>
-                    <b>reizbih@mail.ru</b>
+                    <b>allegoriya.too@mail.ru</b>
                 </a>
             </div>
             <div class="col">
                 <h4>Навигация</h4>
                 <nav>
                     <a href="#about">О нас</a>
-                    <a href="#teaching">Обучение</a>
-                    <a href="#photoshoot">Фотосессия</a>
+                    <!-- <a href="#teaching">Обучение</a> -->
+                    <!-- <a href="#photoshoot">Фотосессия</a> -->
                     <a href="#address">Адрес</a>
                 </nav>
             </div>
@@ -450,7 +458,7 @@
 
     <div class="wg">
         <div id="wg-content" class="wg-content">
-            <a href="tel:+79293934589 "><img src="img/phone.svg" alt="Телефон"></a>
+            <a href="tel:+79293934589"><img src="img/phone.svg" alt="Телефон"></a>
             <!-- <a href="skype:username?call" target="_blank"><img src="img/sk.svg" alt="Скайп"></a> -->
             <!-- <a href="https://vk.me/username" target="_blank"><img src="img/vk.svg" alt="Вконтакте"></a> -->
             <a href="https://wa.me/79293934589 " target="_blank"><img src="img/wa.svg" alt="Whatsapp"></a>
