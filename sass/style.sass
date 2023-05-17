@@ -110,16 +110,16 @@
         width: 112%
         max-width: unset
         object-fit: cover
-        height: 90%
+        height: 85%
         border-radius: 60px
         z-index: -1
 
     h2
         display: inline-block
-        padding: 42px 200px 42px 0
+        padding: 32px 200px 32px 0
         position: relative
         z-index: 1
-        margin-bottom: 40px
+        margin-bottom: 80px
         &::before
             position: absolute
             top: 0
@@ -130,13 +130,13 @@
             height: 100%
             right: 0
             background-color: rgba(83, 127, 231, 0.6)
-            backdrop-filter: blur(10px)
-            border-radius: 50px
+            backdrop-filter: blur(6px)
+            border-radius: 40px
 
 .about
     p
-        font-size: 20px
-        line-height: 150%
+        font-size: 18px
+        line-height: 140%
         margin: 0
 
 .features
@@ -157,17 +157,21 @@
         max-width: 45%
         margin: 0
 
+    ul 
+        justify-content: center
+        gap: 24px
+
     &-item
         background-color: $prime
         border-radius: 50px
         padding: 70px 60px 70px 50px
-        width: 32%
+        width: 30%
         list-style: none
         font-weight: 700
         font-size: 20px
         line-height: 140%
         background-color: rgba(83, 127, 231, 0.6)
-        backdrop-filter: blur(10px)
+        backdrop-filter: blur(7px)
         img
             display: block
             margin-bottom: 40px
@@ -410,6 +414,7 @@
             position: relative
             left: -20px
             flex-wrap: nowrap
+            justify-content: flex-start
             overflow-x: scroll
             gap: 14px
             padding: 20px
